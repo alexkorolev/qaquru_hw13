@@ -8,7 +8,7 @@ public class BaseTest {
 
     @Step("Настройка значений по умолчанию")
     @BeforeAll
-    public void beforeMethod(){
+    public static void beforeMethod(){
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
