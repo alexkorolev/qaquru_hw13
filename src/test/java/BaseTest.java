@@ -8,7 +8,7 @@ public class BaseTest {
 
     @Step("Настройка значений по умолчанию")
     @BeforeAll
-    public static void beforeMethod(){
+    public void beforeMethod(){
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
@@ -17,7 +17,7 @@ public class BaseTest {
 
     @Step("Добавление скриншотов, логов и видеофайлов")
     @AfterEach
-    public static void addAttachments(){
+    public void addAttachments(){
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
