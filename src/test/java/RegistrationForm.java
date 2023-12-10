@@ -1,7 +1,9 @@
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import pages.components.ResultWindow;
 
+@Tag("lesson")
 public class RegistrationForm  extends BaseTest{
 
     RegistrationPage registrationPage = new RegistrationPage();
