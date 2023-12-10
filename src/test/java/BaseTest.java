@@ -1,6 +1,5 @@
 import com.codeborne.selenide.Configuration;
 import helpers.Attach;
-import io.qameta.allure.Step;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -8,7 +7,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 public class BaseTest {
-    
     @BeforeAll
     public static void beforeMethod(){
         Configuration.baseUrl = "https://demoqa.com";
