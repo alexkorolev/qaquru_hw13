@@ -24,7 +24,7 @@ public class BaseTest {
     }
 
     @AfterEach
-    void afterTestsRemote() {
+    void AfterTestMethod() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
