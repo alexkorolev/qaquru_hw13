@@ -8,8 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.Map;
 
 public class BaseTest {
-
-    @Step("Настройка значений по умолчанию")
+    
     @BeforeAll
     public static void beforeMethod(){
         Configuration.baseUrl = "https://demoqa.com";
@@ -23,5 +22,13 @@ public class BaseTest {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
+    }
+
+    @AfterEach
+    void addAttachments(){
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 }

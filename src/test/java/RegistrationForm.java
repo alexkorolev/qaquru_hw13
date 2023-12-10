@@ -12,15 +12,6 @@ public class RegistrationForm  extends BaseTest{
     ResultWindow resultWindow = new ResultWindow();
     DataForm human = new DataForm();
 
-    @Step("Добавление скриншотов, логов и видеофайлов")
-    @AfterEach
-    void addAttachments(){
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-    }
-
     @Tag("lesson")
     @Test
     void fillFullPracticeForm() {
