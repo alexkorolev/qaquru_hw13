@@ -17,7 +17,7 @@ public class BaseTest {
 
     @Step("Добавление скриншотов, логов и видеофайлов")
     @AfterEach
-    public void addAttachments(){
+    public static void addAttachments(){
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
