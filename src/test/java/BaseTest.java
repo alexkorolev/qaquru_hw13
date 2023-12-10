@@ -24,12 +24,4 @@ public class BaseTest {
         ));
         Configuration.browserCapabilities = capabilities;
     }
-    @Step("Добавление скриншотов, логов и видеофайлов")
-    @AfterEach
-    void addAttachments(){
-        Attach.screenshotAs("Last screenshot");
-        Attach.pageSource();
-        Attach.browserConsoleLogs();
-        Attach.addVideo();
-    }
 }

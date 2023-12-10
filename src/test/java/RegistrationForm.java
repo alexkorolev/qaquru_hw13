@@ -1,3 +1,6 @@
+import helpers.Attach;
+import io.qameta.allure.Step;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
@@ -8,6 +11,15 @@ public class RegistrationForm  extends BaseTest{
     RegistrationPage registrationPage = new RegistrationPage();
     ResultWindow resultWindow = new ResultWindow();
     DataForm human = new DataForm();
+
+    @Step("Добавление скриншотов, логов и видеофайлов")
+    @AfterEach
+    void addAttachments(){
+        Attach.screenshotAs("Last screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
+        Attach.addVideo();
+    }
 
     @Tag("lesson")
     @Test
