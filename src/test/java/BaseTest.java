@@ -1,7 +1,10 @@
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.BeforeAll;
 
 public class BaseTest {
+    
+    @Step("Настройка значений по умолчанию")
     @BeforeAll
     public static void beforeMethod(){
         Configuration.baseUrl = "https://demoqa.com";
