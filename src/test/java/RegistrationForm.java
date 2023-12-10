@@ -3,13 +3,13 @@ import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 import pages.components.ResultWindow;
 
-@Tag("lesson")
 public class RegistrationForm  extends BaseTest{
 
     RegistrationPage registrationPage = new RegistrationPage();
     ResultWindow resultWindow = new ResultWindow();
     DataForm human = new DataForm();
 
+    @Tag("lesson")
     @Test
     void fillFullPracticeForm() {
         registrationPage
@@ -42,6 +42,7 @@ public class RegistrationForm  extends BaseTest{
                 .checkTableText(human.state + " " + human.city);
     }
 
+    @Tag("lesson")
     @Test
     void fillMinFieldsOfPracticeForm() {
         registrationPage
@@ -61,6 +62,7 @@ public class RegistrationForm  extends BaseTest{
                 .checkTableText(human.phoneNumber);
     }
 
+    @Tag("lesson")
     @Test
     void notFillMinFieldsOfForm() {
         registrationPage
